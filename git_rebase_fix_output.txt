@@ -1,0 +1,57 @@
+warning: in the working copy of 'android/app/google-services.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'linux/flutter/generated_plugin_registrant.cc', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'linux/flutter/generated_plugin_registrant.h', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'linux/flutter/generated_plugins.cmake', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'macos/Flutter/GeneratedPluginRegistrant.swift', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'windows/flutter/generated_plugin_registrant.cc', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'windows/flutter/generated_plugin_registrant.h', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'windows/flutter/generated_plugins.cmake', LF will be replaced by CRLF the next time Git touches it
+Saved working directory and index state On feature/add-cloud-workflow: wip-before-rebase-abort
+warning: failed to remove git_rebase_fix_output.txt: Invalid argument
+fatal: no rebase in progress
+On branch feature/add-cloud-workflow
+Your branch is up to date with 'origin/feature/add-cloud-workflow'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   linux/flutter/generated_plugin_registrant.cc
+	modified:   linux/flutter/generated_plugin_registrant.h
+	modified:   linux/flutter/generated_plugins.cmake
+	modified:   macos/Flutter/GeneratedPluginRegistrant.swift
+	modified:   windows/flutter/generated_plugin_registrant.cc
+	modified:   windows/flutter/generated_plugin_registrant.h
+	modified:   windows/flutter/generated_plugins.cmake
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	git_rebase_fix_output.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+* feature/add-cloud-workflow 747d810 [origin/feature/add-cloud-workflow] initial commit
+  main                       747d810 initial commit
+M	linux/flutter/generated_plugin_registrant.cc
+M	linux/flutter/generated_plugin_registrant.h
+M	linux/flutter/generated_plugins.cmake
+M	macos/Flutter/GeneratedPluginRegistrant.swift
+M	windows/flutter/generated_plugin_registrant.cc
+M	windows/flutter/generated_plugin_registrant.h
+M	windows/flutter/generated_plugins.cmake
+Your branch is up to date with 'origin/feature/add-cloud-workflow'.
+Already on 'feature/add-cloud-workflow'
+stash@{0}: On feature/add-cloud-workflow: wip-before-rebase-abort
+Too many revisions specified: 'stash@' 'MAA=' 'xml' 'xml'
+error: unknown switch `e'
+usage: git stash pop [--index] [-q | --quiet] [<stash>]
+
+    -q, --[no-]quiet      be quiet, only report errors
+    --[no-]index          attempt to recreate the index
+
+1 .M N... 100644 100644 100644 e71a16d23d05881b554326e645083799ab9bfc5e e71a16d23d05881b554326e645083799ab9bfc5e linux/flutter/generated_plugin_registrant.cc
+1 .M N... 100644 100644 100644 e0f0a47bc08f30b550b47b01de4c9206b6824dd9 e0f0a47bc08f30b550b47b01de4c9206b6824dd9 linux/flutter/generated_plugin_registrant.h
+1 .M N... 100644 100644 100644 2e1de87a7eb61e17463f7406106f6c413533cecf 2e1de87a7eb61e17463f7406106f6c413533cecf linux/flutter/generated_plugins.cmake
+1 .M N... 100644 100644 100644 cccf817a52206e8a8eef501faed292993ff21a31 cccf817a52206e8a8eef501faed292993ff21a31 macos/Flutter/GeneratedPluginRegistrant.swift
+1 .M N... 100644 100644 100644 8b6d4680af388f28db8742ef7fb8246e2bb1fffb 8b6d4680af388f28db8742ef7fb8246e2bb1fffb windows/flutter/generated_plugin_registrant.cc
+1 .M N... 100644 100644 100644 dc139d85a93101cc0f6e9db03a3e1a9f68e8dd7e dc139d85a93101cc0f6e9db03a3e1a9f68e8dd7e windows/flutter/generated_plugin_registrant.h
+1 .M N... 100644 100644 100644 b93c4c30c16703f640bc38523e56204ade09399e b93c4c30c16703f640bc38523e56204ade09399e windows/flutter/generated_plugins.cmake
+? git_rebase_fix_output.txt
