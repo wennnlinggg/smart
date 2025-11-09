@@ -19,34 +19,46 @@ class LoggedInHomePage extends StatelessWidget {
     Widget imageCard(String title, Color color, {String? assetName}) {
       return Container(
         margin: const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
-        height: 150,
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(12),
-        ),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(12),
-          child: Stack(
-            children: [
-              if (assetName != null)
-                Positioned.fill(
-                  child: Image.asset(
-                    'assets/images/$assetName',
-                    fit: BoxFit.cover,
-                    errorBuilder: (_, __, ___) => Container(color: color),
-                  ),
-                )
-              else
-                Positioned.fill(child: Container(color: color)),
-              Align(
-                alignment: Alignment.bottomLeft,
-                child: Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Text(title, style: const TextStyle(color: Colors.white, fontSize: 16)),
-                ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // image area
+            Container(
+              height: 180,
+              decoration: BoxDecoration(
+                color: color,
+                borderRadius: BorderRadius.circular(12),
               ),
-            ],
-          ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: assetName != null
+                    ? Image.asset(
+                        'assets/images/$assetName',
+                        fit: BoxFit.cover,
+                        errorBuilder: (_, __, ___) => Container(color: color),
+                      )
+                    : Container(color: color),
+              ),
+            ),
+
+            // title bar under the image
+            Container(
+              height: 52,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(12),
+                  bottomRight: Radius.circular(12),
+                ),
+                boxShadow: [
+                  BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 4, offset: const Offset(0, 2)),
+                ],
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 14),
+              alignment: Alignment.centerLeft,
+              child: Text(title, style: const TextStyle(color: Colors.black87, fontSize: 16)),
+            ),
+          ],
         ),
       );
     }
