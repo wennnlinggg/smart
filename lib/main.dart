@@ -138,7 +138,7 @@ class _RootShellState extends State<RootShell> {
   @override
   Widget build(BuildContext context) {
     final pages = <Widget>[
-      const SchedulePage(),
+      const LoggedInHomePage(),
       const PlaceholderWidget(label: 'Energy'),
       const ProfilePage(),
       const SettingsPage(),
