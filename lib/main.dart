@@ -83,25 +83,7 @@ class LoggedInHomePage extends StatelessWidget {
             ),
           ),
         ),
-        bottomNavigationBar: BottomAppBar(
-          elevation: 8,
-          notchMargin: 6,
-          shape: const CircularNotchedRectangle(),
-          child: SizedBox(
-            height: 64,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                _NavItem(icon: Icons.home_outlined, onTap: () => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const RootShell(initialIndex: 0))), selected: false),
-                _NavItem(icon: Icons.bolt_outlined, onTap: () => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const RootShell(initialIndex: 1))), selected: false),
-                const SizedBox(width: 56),
-                _NavItem(icon: Icons.person_outline, onTap: () => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const RootShell(initialIndex: 2))), selected: true),
-                _NavItem(icon: Icons.more_horiz, onTap: () => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const RootShell(initialIndex: 3))), selected: false),
-              ],
-            ),
-          ),
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+        // NOTE: bottom navigation is provided by the outer RootShell scaffold.
       ),
     );
   }
