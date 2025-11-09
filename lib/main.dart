@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'settings_page.dart';
+import 'image_pages.dart' as pages;
 
 void main() {
   runApp(const MyApp());
@@ -74,10 +75,10 @@ class LoggedInHomePage extends StatelessWidget {
                 const SizedBox(height: 8),
                 Text('Eco Plug', style: Theme.of(context).textTheme.titleLarge?.copyWith(fontSize: 28, color: Colors.green[900])),
                 const SizedBox(height: 12),
-                imageCard('淨零排放', Colors.pink.shade300, assetName: '5.jpg'),
-                imageCard('智能插座', Colors.green.shade300, assetName: '1.png'),
-                imageCard('技巧與訣竅', Colors.blueGrey.shade300, assetName: '2.png'),
-                imageCard('瞭解你如何能幫助', Colors.teal.shade300, assetName: '3.png'),
+                imageCard('淨零排放', Colors.pink.shade300, assetName: 'a.png'),
+                imageCard('智能插座', Colors.green.shade300, assetName: 'b.png'),
+                imageCard('技巧與訣竅', Colors.blueGrey.shade300, assetName: 'c.png'),
+                imageCard('瞭解你如何能幫助', Colors.teal.shade300, assetName: 'd.png'),
                 const SizedBox(height: 24),
               ],
             ),
@@ -131,15 +132,15 @@ class _RootShellState extends State<RootShell> {
 
   @override
   Widget build(BuildContext context) {
-    final pages = <Widget>[
+    final tabs = <Widget>[
       const LoggedInHomePage(),
-      const PlaceholderWidget(label: 'Energy'),
+      const pages.EnergyPage(),
       const ProfilePage(),
       const SettingsPage(),
     ];
 
     return Scaffold(
-      body: pages[_selectedIndex],
+      body: tabs[_selectedIndex],
       floatingActionButton: _selectedIndex == 0
           ? FloatingActionButton(
               onPressed: () {},
